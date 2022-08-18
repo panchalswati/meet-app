@@ -35,7 +35,7 @@ const oAuth2Client = new OAuth2(
  * as a URL parameter.
  *
  */
-export async function getAuthURL() {
+module.exports.getAuthURL = () => {
   /**
    *
    * Scopes array passed to the `scope` option. Any scopes passed must be enabled in the
@@ -59,7 +59,7 @@ export async function getAuthURL() {
   };
 }
 
-export async function getAccessToken(event) {
+module.exports.getAccessToken = (event) => {
   const oAuth2Client = new OAuth2(
     client_id,
     client_secret,
@@ -105,7 +105,7 @@ export async function getAccessToken(event) {
     });
 }
 
-export async function getCalenderEvents(event) {
+module.exports.getCalenderEvents = async (event) => {
   // The values used to instantiate the OAuthClient 
   const oAuth2Client = new OAuth2(
     client_id,
