@@ -35,7 +35,7 @@ const oAuth2Client = new OAuth2(
  * as a URL parameter.
  *
  */
-module.exports.getAuthURL = () => {
+module.exports.getAuthURL = async () => {
   /**
    *
    * Scopes array passed to the `scope` option. Any scopes passed must be enabled in the
@@ -59,7 +59,7 @@ module.exports.getAuthURL = () => {
   };
 }
 
-module.exports.getAccessToken = (event) => {
+module.exports.getAccessToken = async (event) => {
   const oAuth2Client = new OAuth2(
     client_id,
     client_secret,
@@ -150,7 +150,7 @@ module.exports.getCalenderEvents = async (event) => {
       return {
         statusCode: 500,
         headers: {
-          'Access-Conreol-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify(error),
       };
