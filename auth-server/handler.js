@@ -1,4 +1,4 @@
-import { google } from "googleapis";
+const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
 const calendar = google.calendar("v3");
 /**
@@ -146,7 +146,7 @@ export async function getCalenderEvents(event) {
     })
     .catch(error => {
       // Handle error
-      console.error(error);
+      console.error("Error in getting calendar events", error);
       return {
         statusCode: 500,
         headers: {
