@@ -144,7 +144,7 @@ module.exports.getCalenderEvents = async (event) => {
         body: JSON.stringify({ events: results.data.items })
       };
     })
-    .catch(error => {
+    .catch((error) => {
       // Handle error
       console.error("Error in getting calendar events", error);
       return {
