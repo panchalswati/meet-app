@@ -88,6 +88,8 @@ module.exports.getAccessToken = async (event) => {
         statusCode: 200,
         headers: {
           "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "POST, PUT, GET, OPTIONS",
+          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
         },
         body: JSON.stringify(token),
       };
@@ -97,9 +99,6 @@ module.exports.getAccessToken = async (event) => {
       console.error(err);
       return {
         statusCode: 500,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-        },
         body: JSON.stringify(err),
       };
     });
@@ -107,7 +106,7 @@ module.exports.getAccessToken = async (event) => {
 
 module.exports.getCalenderEvents = async (event) => {
   // The values used to instantiate the OAuthClient 
-  const oAuth2Client = new OAuth2(
+  const oAuth2Client = new google.auth.OAuth2(
     client_id,
     client_secret,
     redirect_uris[0]
@@ -153,5 +152,3 @@ module.exports.getCalenderEvents = async (event) => {
       };
     });
 }
-
-
