@@ -4,7 +4,7 @@
   display: block;
   text-align: center;
   padding: 0 5%;
-  background-color: rgb(47, 83, 115);
+  background-color: cadetblue;
   min-height: 180px;
   width: 85%;
   margin-left: 2%;
@@ -17,9 +17,9 @@
 }
 
 h1 {
-  color: darkseagreen;
-  border-top: 2px darkseagreen solid;
-  border-bottom: 2px darkseagreen solid;
+  color: darkblue;
+  border-top: 2px solid black;
+  border-bottom: 2px black solid;
 }
 
 .subtitle {
@@ -171,7 +171,6 @@ input[type="number"] {
   border: 3px white solid;
   box-shadow: 0 0 5px 5px rgb(47, 83, 115);
   border-radius: 3vw;
-  transform: rotate(-3deg);
 }
 
 .start-time:hover {
@@ -185,7 +184,7 @@ input[type="number"] {
   padding: 1.2vw 0;
   border-top: 1px solid rgb(47, 83, 115);
   border-bottom: 2px solid rgb(47, 83, 115);
-  transform: rotate(2deg);
+
 }
 
 .event-details {
@@ -207,7 +206,7 @@ input[type="number"] {
 }
 
 .btn-toggle-details:hover {
-  background-color: rgb(47, 83, 115);
+  background-color: lightblue;
   color: darkseagreen;
   border: 1px darkseagreen solid;
 }
@@ -242,7 +241,7 @@ input[type="number"] {
 .data-vis-wrapper {
   display: flex;
   align-items: center;
-  background-color: darkseagreen;
+  background-color: lightblue;
   flex-direction: column;
 }
 
