@@ -17,7 +17,7 @@
 }
 
 h1 {
-  color: darkblue;
+  color: white;
   border-top: 2px solid black;
   border-bottom: 2px black solid;
 }
@@ -310,7 +310,7 @@ input[type="number"] {
 
   .App {
     padding: 0 5%;
-    background-color: rgb(47, 83, 115);
+    background-color: midnightblue;
     width: 50%;
     margin-left: 20%;
   }
