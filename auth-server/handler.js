@@ -118,7 +118,7 @@ module.exports.getCalenderEvents = async (event) => {
   return new Promise((resolve, reject) => {
     calendar.events.list(
       {
-        calenderId: calendar_id,
+        calenderId: 'fullstackwebdev@careerfoundry.com',
         auth: oAuth2Client,
         timeMin: new Date().toISOString(),
         singleEvents: true,
