@@ -22,7 +22,7 @@ const credentials = {
   redirect_uris: ["https://panchalswati.github.io/meet-app"],
   javascript_origins: ["https://panchalswati.github.io", "http://localhost:3000"],
 };
-const { client_secret, client_id, redirect_uris } = credentials;
+const { client_secret, client_id, redirect_uris, calendar_id } = credentials;
 const oAuth2Client = new google.auth.OAuth2(
   client_id,
   client_secret,
@@ -118,7 +118,7 @@ module.exports.getCalenderEvents = async (event) => {
   return new Promise((resolve, reject) => {
     calendar.events.list(
       {
-        calenderId: 'fullstackwebdev@careerfoundry.com',
+        calendarId: calendar_id,
         auth: oAuth2Client,
         timeMin: new Date().toISOString(),
         singleEvents: true,
